@@ -26,6 +26,7 @@
 		{
 			echo "<center><h3><script>alert('Sorry.. This email is already registered !!');</script></h3></center>";
 			$_SESSION['email'] = $email;
+			$_SESSION["loginonce"] = true;
             header("refresh:0;url=login.php");
         }
 		else

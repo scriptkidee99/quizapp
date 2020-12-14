@@ -5,6 +5,7 @@ if (!(isset($_SESSION['email']))) {
     echo '<script>alert("redirecting to login");</script>';
     header("location:login.php");
 } else {
+    if(isset($_SESSION["loginonce"]))
     if($_SESSION["loginonce"]){
         $_SESSION["loginonce"] = false;
         echo '<script>alert("successfully logged in");</script>';
